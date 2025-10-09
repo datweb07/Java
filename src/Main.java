@@ -1,4 +1,3 @@
-import java.awt.desktop.SystemSleepEvent;
 import java.util.Scanner;
 
 public class Main {
@@ -13,11 +12,11 @@ public class Main {
         double giaTien = 25.5;
         boolean conSach = true;
         char maKho = 'D';
-        System.out.println("Ten sach: "+tenSach);
-        System.out.println("Nam: "+namXuatBan);
-        System.out.println("Gia: "+giaTien);
-        System.out.println("Con sach: "+conSach);
-        System.out.println("Ma kho: "+maKho);
+        System.out.println("Ten sach: " + tenSach);
+        System.out.println("Nam: " + namXuatBan);
+        System.out.println("Gia: " + giaTien);
+        System.out.println("Con sach: " + conSach);
+        System.out.println("Ma kho: " + maKho);
 
         final int temperature = 100; // final là hằng số
         System.out.println("Nhiet do " + temperature);
@@ -208,6 +207,8 @@ public class Main {
         System.out.println("y = " + y);
 
 */
+
+/*
         // giải phương trình bậc 2
         Scanner scanner = new Scanner(System.in);
         System.out.print("nhập vào a: ");
@@ -246,9 +247,176 @@ public class Main {
             }
         }
 
+*/
 
+/*
+        // switch...case
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("nhập số nguyên 0 - 3: ");
+        int n = scanner.nextInt();
 
+        switch (n) {
+            case 2: {
+                System.out.println("thứ hai");
+                break;
+            }
+            case 3: {
+                System.out.println("thứ ba");
+                break;
+            }
+            default: {
+                System.out.println("lỗi!");
+            }
+        }
 
+        // tìm số ngày của tháng
+        Scanner sc = new Scanner(System.in);
+        System.out.println("nhập vào tháng: ");
+        int month = sc.nextInt();
+
+        System.out.println("nhập vào năm: ");
+        int year = sc.nextInt();
+
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                System.out.println("có 31 ngày");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                System.out.println("có 30 ngày");
+                break;
+            case 2:
+                if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                    System.out.println("có 29 ngày");
+                } else {
+                    System.out.println("có 28 ngày");
+                }
+                break;
+            default:
+                System.out.println("lỗi!");
+                break;
+        }
+*/
+
+/*
+        // for
+        for (int i = 0; i < 10; i++){
+            System.out.println("hello world");
+        }
+
+        System.out.println("-------------------------");
+
+        for (int i = 20; i > 0;i--){
+            System.out.println("HELLO WORLD");
+        }
+
+        // in bảng cửu chương
+        for (int i = 2;i <= 9;i++){
+            for (int j = 1;j<=10;j++){
+                System.out.println(i+" x "+j+" = "+(i*j));
+            }
+            System.out.println("-----");
+        }
+*/
+/*
+        // while
+        int n = 1;
+        Scanner sc = new Scanner(System.in);
+        while (n!=0){
+            System.out.println("nhập n = 0 để thoát vòng lặp: ");
+            n = sc.nextInt();
+        }
+*/
+
+/*
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("nhập số nguyên n>0: ");
+        n = sc.nextInt();
+
+        String nhiPhan = "";
+        // chia liên tục cho 2, lấy phần dư và đảo ngược chuỗi
+
+        while (n>0){
+            nhiPhan = (n%2) + nhiPhan;
+            n/=2;
+        }
+        System.out.println("hệ nhị phân của " + n + " là: " + nhiPhan);
+*/
+/*
+        // do...while
+        int n;
+        Scanner sc = new Scanner(System.in);
+        do{
+            System.out.println("nhập vào n>0: ");
+            n=sc.nextInt();
+        }while(n<=0);
+*/
+
+        // break, continue, return
+//        int out, in = 0;
+//        for (out = 0; out < 10; out++){
+//            for (in = 0; in < 20; in++){
+//                if (in > 10){
+//                    break;
+//                }
+//            }
+//            System.out.println("bên trong vòng lặp: out = " + out + ", in = " + in);
+//        }
+//        System.out.println("bên ngoài vòng lặp: out = " + out + ", in = " + in);
+
+//        int out, in = 0;
+//        outer: for (out = 0; out < 10; out++){
+//            for (in = 0; in < 20; in++){
+//                if (in > 10){
+//                    break outer;  // vì đặt outer (label) ở vòng lặp bên ngoài nên khi dùng break thì nó sẽ kết thúc vòng lặp bên ngoài luôn
+//                }
+//            }
+//            System.out.println("bên trong vòng lặp: out = " + out + ", in = " + in);
+//        }
+//        System.out.println("bên ngoài vòng lặp: out = " + out + ", in = " + in);
+
+//        int max = 100;
+//        for (int i = 0; i < max; i++){
+//            if (i < 50){
+//                continue;
+//            }
+//            System.out.println(i);
+//        }
+
+        outer: for (int i = 2;i <= 9;i++){
+            for (int j = 1;j<=10;j++){
+                if(i<5){
+                    continue outer;
+                }
+                System.out.println(i+" x "+j+" = "+(i*j));
+            }
+            System.out.println("-----");
+        }
+
+        // try,catch,finally
+        Scanner sc = new Scanner(System.in);
+        int n = 0;
+        try {
+            System.out.println("nhập số nguyên n: ");
+            n = sc.nextInt();
+        }catch (Exception ex){
+            System.out.println("nhập dữ liệu không đúng");
+        }finally {
+            System.out.println("finally!");
+        }
+        System.out.println("giá trị nhập là: " + n);
+        System.out.println("kết thúc chương trình");
 
     }
 }
+
+

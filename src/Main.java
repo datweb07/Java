@@ -392,6 +392,7 @@ public class Main {
 //            System.out.println(i);
 //        }
 
+/*
         outer: for (int i = 2;i <= 9;i++){
             for (int j = 1;j<=10;j++){
                 if(i<5){
@@ -415,6 +416,28 @@ public class Main {
         }
         System.out.println("giá trị nhập là: " + n);
         System.out.println("kết thúc chương trình");
+*/
+
+        // basic array
+/*      double[] mang1;
+        mang1 = new double[10];
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < mang1.length; i++) {
+            System.out.println("nhập phần tử thứ " + i + ": ");
+            mang1[i] = scanner.nextDouble();
+        }
+        double tong = 0;
+        for (int i = 0; i < mang1.length; i++){
+            tong+=mang1[i];
+        }
+        System.out.println("tổng = " + tong);
+
+*/
+        double mang2[];
+        mang2 = new double[]{1,2,3,4,5};
+        for (int i = 0; i < mang2.length; i++){
+            System.out.println((mang2[i]));
+        }
 
     }
 }
